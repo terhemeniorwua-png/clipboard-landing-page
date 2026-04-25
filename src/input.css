@@ -7,6 +7,7 @@
 img{
     margin: auto;
     padding-bottom: 2em;
+    width: 50%;
 }
 .sec{
     text-align: center;
@@ -21,9 +22,39 @@ h2{
      line-height: 1em;
 }
 p{
-    font-size: clamp(1.5rem, 8vw, 5rem);
+    font-size: clamp(1rem, 8vw, 5rem);
     font-weight:400;
     color:rgb(81, 81, 81);
-    line-height: 1.5em;
+    line-height: 1.3em;
 }
+button{
+    display: block;
+    margin: auto;
+    width: 80%;
+    padding: 1em;
+    font-size: x-large;
+    font-weight: 700;
+    color: white;
+    border-color: rgb(0, 251, 255);
+    margin-top: 0.8em;
+    border-radius: 2em;
+    border-bottom: #4a49490d;
+    border-style: groove;
+}
+.button1{
+    background-color: skyblue;
+    transition-duration: 0.5s;
+}
+.button1:hover{
+    background-color: skyblue;
+    transition-duration: 0.5s;
+}
+.button2{
+    background-color: rgba(0, 0, 255, 0.673);
+    transition-duration: 0.5s;
+}
+.button2:hover{
+    background-color: ;
+}
+
 
