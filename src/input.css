@@ -7,9 +7,10 @@
 img{
     margin: auto;
     padding-bottom: 2em;
+    padding-top: 2em;
     width: 50%;
 }
-.sec{
+section{
     text-align: center;
     padding-top: 15%;
 }
@@ -20,6 +21,7 @@ h2{
     font-weight: bolder;
     color:#4a4949;
      line-height: 1em;
+     padding-bottom: 1.2em;
 }
 p{
     font-size: clamp(1rem, 8vw, 5rem);
