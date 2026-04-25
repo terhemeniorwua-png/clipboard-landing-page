@@ -8,7 +8,6 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --spacing: 0.25rem;
-    --container-3xl: 48rem;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
   }
@@ -162,14 +161,26 @@
   }
 }
 @layer utilities {
+  .start {
+    inset-inline-start: var(--spacing);
+  }
+  .m-auto {
+    margin: auto;
+  }
   .contents {
     display: contents;
+  }
+  .flex {
+    display: flex;
   }
   .table {
     display: table;
   }
-  .w-3xl {
-    width: var(--container-3xl);
+  .w-16 {
+    width: calc(var(--spacing) * 16);
+  }
+  .w-\[80\%\] {
+    width: 80%;
   }
   .border-collapse {
     border-collapse: collapse;
@@ -177,12 +188,37 @@
   .resize {
     resize: both;
   }
+  .justify-center {
+    justify-content: center;
+  }
+  .space-y-12 {
+    :where(& > :not(:last-child)) {
+      --tw-space-y-reverse: 0;
+      margin-block-start: calc(calc(var(--spacing) * 12) * var(--tw-space-y-reverse));
+      margin-block-end: calc(calc(var(--spacing) * 12) * calc(1 - var(--tw-space-y-reverse)));
+    }
+  }
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
-  .pt-5 {
-    padding-top: calc(var(--spacing) * 5);
+  .pt-10 {
+    padding-top: calc(var(--spacing) * 10);
+  }
+  .pt-20 {
+    padding-top: calc(var(--spacing) * 20);
+  }
+  .pb-5 {
+    padding-bottom: calc(var(--spacing) * 5);
+  }
+  .pb-10 {
+    padding-bottom: calc(var(--spacing) * 10);
+  }
+  .pb-20 {
+    padding-bottom: calc(var(--spacing) * 20);
+  }
+  .pb-52 {
+    padding-bottom: calc(var(--spacing) * 52);
   }
   .underline {
     text-decoration-line: underline;
@@ -200,7 +236,6 @@
     margin: auto;
     padding-bottom: 2em;
     padding-top: 2em;
-    width: 50%;
   }
   section {
     text-align: center;
@@ -237,6 +272,7 @@ button {
 .button1 {
   background-color: skyblue;
   transition-duration: 0.5s;
+  margin-top: 15%;
 }
 .button1:hover {
   background-color: skyblue;
@@ -248,6 +284,11 @@ button {
 }
 .button2:hover {
   background-color: ;
+}
+@property --tw-space-y-reverse {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
 }
 @property --tw-border-style {
   syntax: "*";
@@ -262,6 +303,7 @@ button {
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
+      --tw-space-y-reverse: 0;
       --tw-border-style: solid;
       --tw-outline-style: solid;
     }
