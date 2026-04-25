@@ -44,12 +44,12 @@ button{
     border-style: groove;
 }
 .button1{
-    background-color: skyblue;
+    background-color: rgb(44, 195, 255);
     transition-duration: 0.5s;
     margin-top: 15%;
 }
 .button1:hover{
-    background-color: skyblue;
+    background-color: rgb(116, 205, 240);
     transition-duration: 0.5s;
 }
 .button2{
@@ -57,7 +57,11 @@ button{
     transition-duration: 0.5s;
 }
 .button2:hover{
-    background-color: ;
+    background-color: rgba(0, 0, 255, 0.421);
+}
+.icon:hover{
+    transform:scale(105%);
+    transition-duration: 0.8s;
 }
 
 

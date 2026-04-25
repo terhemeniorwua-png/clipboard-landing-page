@@ -182,12 +182,6 @@
   .w-\[80\%\] {
     width: 80%;
   }
-  .border-collapse {
-    border-collapse: collapse;
-  }
-  .resize {
-    resize: both;
-  }
   .justify-center {
     justify-content: center;
   }
@@ -198,30 +192,17 @@
       margin-block-end: calc(calc(var(--spacing) * 12) * calc(1 - var(--tw-space-y-reverse)));
     }
   }
-  .border {
-    border-style: var(--tw-border-style);
-    border-width: 1px;
-  }
   .pt-10 {
     padding-top: calc(var(--spacing) * 10);
   }
   .pt-20 {
     padding-top: calc(var(--spacing) * 20);
   }
-  .pb-5 {
-    padding-bottom: calc(var(--spacing) * 5);
-  }
   .pb-10 {
     padding-bottom: calc(var(--spacing) * 10);
   }
   .pb-20 {
     padding-bottom: calc(var(--spacing) * 20);
-  }
-  .pb-52 {
-    padding-bottom: calc(var(--spacing) * 52);
-  }
-  .underline {
-    text-decoration-line: underline;
   }
   .outline {
     outline-style: var(--tw-outline-style);
@@ -270,12 +251,12 @@ button {
   border-style: groove;
 }
 .button1 {
-  background-color: skyblue;
+  background-color: rgb(44, 195, 255);
   transition-duration: 0.5s;
   margin-top: 15%;
 }
 .button1:hover {
-  background-color: skyblue;
+  background-color: rgb(116, 205, 240);
   transition-duration: 0.5s;
 }
 .button2 {
@@ -283,17 +264,16 @@ button {
   transition-duration: 0.5s;
 }
 .button2:hover {
-  background-color: ;
+  background-color: rgba(0, 0, 255, 0.421);
+}
+.icon:hover {
+  transform: scale(105%);
+  transition-duration: 0.8s;
 }
 @property --tw-space-y-reverse {
   syntax: "*";
   inherits: false;
   initial-value: 0;
-}
-@property --tw-border-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
 }
 @property --tw-outline-style {
   syntax: "*";
@@ -304,7 +284,6 @@ button {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
       --tw-space-y-reverse: 0;
-      --tw-border-style: solid;
       --tw-outline-style: solid;
     }
   }
