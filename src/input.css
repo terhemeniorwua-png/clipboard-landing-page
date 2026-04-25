@@ -1,1 +1,12 @@
 @import "tailwindcss";
+
+@media screen and (min-width:50em) {
+    main{
+    padding: calc(10% -10px);
+    text-align: center;
+}
+}
+
+h1{
+    
+}
