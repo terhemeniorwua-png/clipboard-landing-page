@@ -1,4 +1,5 @@
 .vscode/
 node_modules/
-preview.jpg
-style-guide.md
+preview.jpg/
+style-guide.md/
+README.md/
