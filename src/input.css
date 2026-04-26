@@ -85,6 +85,18 @@ p{
  button{
     width: 45%;
 }
+.h2{
+    font-size: 2em;
+}
+.paraSize{
+    font-size: 0.8em;   
+}
+.div{
+    text-align: start;
+}
+.paddingtop{
+    
+}
 }
 
 
