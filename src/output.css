@@ -188,11 +188,23 @@
   .w-\[60\%\] {
     width: 60%;
   }
+  .w-\[70\%\] {
+    width: 70%;
+  }
+  .w-\[70\] {
+    width: 70;
+  }
   .w-\[80\%\] {
     width: 80%;
   }
-  .w-\[80\] {
-    width: 80;
+  .w-\[90\%\] {
+    width: 90%;
+  }
+  .max-w-16 {
+    max-width: calc(var(--spacing) * 16);
+  }
+  .flex-5 {
+    flex: 5;
   }
   .border-collapse {
     border-collapse: collapse;
@@ -243,6 +255,40 @@
     outline-style: var(--tw-outline-style);
     outline-width: 1px;
   }
+  .max-md\:m-auto {
+    @media (width < 48rem) {
+      margin: auto;
+    }
+  }
+  .max-md\:flex {
+    @media (width < 48rem) {
+      display: flex;
+    }
+  }
+  .max-md\:w-16 {
+    @media (width < 48rem) {
+      width: calc(var(--spacing) * 16);
+    }
+  }
+  .max-md\:w-\[80\%\] {
+    @media (width < 48rem) {
+      width: 80%;
+    }
+  }
+  .max-md\:justify-center {
+    @media (width < 48rem) {
+      justify-content: center;
+    }
+  }
+  .max-md\:space-y-12 {
+    @media (width < 48rem) {
+      :where(& > :not(:last-child)) {
+        --tw-space-y-reverse: 0;
+        margin-block-start: calc(calc(var(--spacing) * 12) * var(--tw-space-y-reverse));
+        margin-block-end: calc(calc(var(--spacing) * 12) * calc(1 - var(--tw-space-y-reverse)));
+      }
+    }
+  }
   .lg\:relative {
     @media (width >= 64rem) {
       position: relative;
@@ -253,9 +299,24 @@
       right: calc(var(--spacing) * 10);
     }
   }
+  .lg\:m-auto {
+    @media (width >= 64rem) {
+      margin: auto;
+    }
+  }
   .lg\:flex {
     @media (width >= 64rem) {
       display: flex;
+    }
+  }
+  .lg\:w-\[55\%\] {
+    @media (width >= 64rem) {
+      width: 55%;
+    }
+  }
+  .lg\:w-\[60\%\] {
+    @media (width >= 64rem) {
+      width: 60%;
     }
   }
   .lg\:w-\[70\%\] {
@@ -263,14 +324,46 @@
       width: 70%;
     }
   }
+  .lg\:w-\[78\%\] {
+    @media (width >= 64rem) {
+      width: 78%;
+    }
+  }
+  .lg\:w-\[80\%\] {
+    @media (width >= 64rem) {
+      width: 80%;
+    }
+  }
+  .lg\:w-\[880\%\] {
+    @media (width >= 64rem) {
+      width: 880%;
+    }
+  }
   .lg\:items-center {
     @media (width >= 64rem) {
       align-items: center;
     }
   }
+  .lg\:justify-around {
+    @media (width >= 64rem) {
+      justify-content: space-around;
+    }
+  }
   .lg\:gap-5 {
     @media (width >= 64rem) {
       gap: calc(var(--spacing) * 5);
+    }
+  }
+  .lg\:gap-10 {
+    @media (width >= 64rem) {
+      gap: calc(var(--spacing) * 10);
+    }
+  }
+  .lg\:max-md\:justify-center {
+    @media (width >= 64rem) {
+      @media (width < 48rem) {
+        justify-content: center;
+      }
     }
   }
 }
