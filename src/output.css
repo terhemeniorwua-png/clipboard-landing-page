@@ -179,17 +179,35 @@
   .w-16 {
     width: calc(var(--spacing) * 16);
   }
-  .w-\[70\%\] {
-    width: 70%;
+  .w-\[50\%\] {
+    width: 50%;
+  }
+  .w-\[55\%\] {
+    width: 55%;
+  }
+  .w-\[60\%\] {
+    width: 60%;
   }
   .w-\[80\%\] {
     width: 80%;
   }
+  .w-\[80\] {
+    width: 80;
+  }
+  .border-collapse {
+    border-collapse: collapse;
+  }
+  .transform {
+    transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
+  }
+  .resize {
+    resize: both;
+  }
   .justify-center {
     justify-content: center;
   }
-  .gap-12 {
-    gap: calc(var(--spacing) * 12);
+  .gap-5 {
+    gap: calc(var(--spacing) * 5);
   }
   .space-y-5 {
     :where(& > :not(:last-child)) {
@@ -205,8 +223,9 @@
       margin-block-end: calc(calc(var(--spacing) * 12) * calc(1 - var(--tw-space-y-reverse)));
     }
   }
-  .pt-10 {
-    padding-top: calc(var(--spacing) * 10);
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
   }
   .pt-20 {
     padding-top: calc(var(--spacing) * 20);
@@ -217,6 +236,9 @@
   .pb-20 {
     padding-bottom: calc(var(--spacing) * 20);
   }
+  .underline {
+    text-decoration-line: underline;
+  }
   .outline {
     outline-style: var(--tw-outline-style);
     outline-width: 1px;
@@ -226,9 +248,9 @@
       position: relative;
     }
   }
-  .lg\:bottom-20 {
+  .lg\:right-10 {
     @media (width >= 64rem) {
-      bottom: calc(var(--spacing) * 20);
+      right: calc(var(--spacing) * 10);
     }
   }
   .lg\:flex {
@@ -236,14 +258,19 @@
       display: flex;
     }
   }
-  .lg\:justify-between {
+  .lg\:w-\[70\%\] {
     @media (width >= 64rem) {
-      justify-content: space-between;
+      width: 70%;
     }
   }
-  .lg\:pb-1 {
+  .lg\:items-center {
     @media (width >= 64rem) {
-      padding-bottom: calc(var(--spacing) * 1);
+      align-items: center;
+    }
+  }
+  .lg\:gap-5 {
+    @media (width >= 64rem) {
+      gap: calc(var(--spacing) * 5);
     }
   }
 }
@@ -296,8 +323,8 @@ h2 {
 @media screen and (min-width:35em) {
   main {
     padding: calc(5% - 50px);
-    padding-left: 20%;
-    padding-right: 20%;
+    padding-left: 0%;
+    padding-right: 0%;
     background-image: url(../images/bg-header-desktop.png);
     background-repeat: no-repeat;
     background-position: top;
@@ -318,16 +345,36 @@ h2 {
     color: rgba(81, 81, 81, 0.596);
   }
   button {
-    width: 45%;
+    width: 30%;
+  }
+  .btn {
+    position: relative;
+    bottom: 10em;
   }
   .h2 {
     font-size: 2em;
   }
   .paraSize {
-    font-size: 0.8em;
+    font-size: 1em;
+    margin-right: 40%;
   }
   .div {
     text-align: start;
+  }
+  .paddingtop {
+    padding-top: 12%;
+  }
+  .sec {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8%;
+  }
+  .pad {
+    padding-top: 0%;
+  }
+  .paraSz {
+    font-size: 1.3em;
   }
 }
 .button1 {
@@ -335,6 +382,7 @@ h2 {
   transition-duration: 0.5s;
   margin-top: 15%;
   box-shadow: 5px 5px 5px rgb(116, 241, 199);
+  margin-right: 3%;
 }
 .button1:hover {
   background-color: rgb(116, 205, 240);
@@ -352,10 +400,35 @@ h2 {
   transform: scale(105%);
   transition-duration: 0.8s;
 }
+@property --tw-rotate-x {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-rotate-y {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-rotate-z {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-skew-x {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-skew-y {
+  syntax: "*";
+  inherits: false;
+}
 @property --tw-space-y-reverse {
   syntax: "*";
   inherits: false;
   initial-value: 0;
+}
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
 }
 @property --tw-outline-style {
   syntax: "*";
@@ -365,7 +438,13 @@ h2 {
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
+      --tw-rotate-x: initial;
+      --tw-rotate-y: initial;
+      --tw-rotate-z: initial;
+      --tw-skew-x: initial;
+      --tw-skew-y: initial;
       --tw-space-y-reverse: 0;
+      --tw-border-style: solid;
       --tw-outline-style: solid;
     }
   }
