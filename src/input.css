@@ -9,6 +9,7 @@ h2{
      padding-bottom: 1.2em;
 }
 
+/* Media query for mobile */
 @media screen and (min-width:10em) {
     main{
     padding: calc(15% - 50px);
@@ -52,6 +53,7 @@ button{
     
 }
 }
+/* Media query for Desktop */
 @media screen and (min-width:35em) {
     main{
     padding: calc(5% - 50px);
@@ -116,7 +118,7 @@ p{
 }
 }
 
-
+/* General custom */
 .button1{
     background-color: rgb(44, 195, 255);
     transition-duration: 0.5s;
